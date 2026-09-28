@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07100f">
+
+    <title>FieldSure | Field Evidence System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BOOT SCREEN
+         ========================= -->
+
+    <div id="boot" class="boot">
+
+        <div class="boot-grid"></div>
+        <div class="boot-glow"></div>
+
+        <div class="boot-content">
+
+            <div class="boot-code">
+                FIELD OPERATIONS // FS-07
+            </div>
+
+            <div class="boot-logo">
+                FIELD<span>SURE</span>
+            </div>
+
+            <p class="boot-sub">
+                PORTABLE FIELD TESTING &amp; EVIDENCE INTEGRITY
+            </p>
+
+            <div class="boot-slogan">
+                <span>CAPTURE WITH CLARITY.</span>
+                <span>RECORD WITH INTEGRITY.</span>
+            </div>
+
+            <div class="boot-slogan-sub">
+                FieldSure — Digital Companion for Field Evidence
+            </div>
+
+            <div class="field-device">
+
+                <div class="device-lid">
+                    <div class="device-screen">
+                        <span>FS</span>
+                        <small>READY</small>
+                    </div>
+                </div>
+
+                <div class="device-body">
+                    <div class="device-slot"></div>
+                    <div class="device-light"></div>
+                </div>
+
+                <div class="device-scan"></div>
+
+            </div>
+
+            <div id="bootText" class="boot-text">
+                INITIALIZING SECURE WORKSPACE...
+            </div>
+
+            <div class="boot-progress">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         APPLICATION
+         ========================= -->
+
+    <div id="app" class="app">
+
+        <!-- =========================
+             TOP BAR
+             ========================= -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    FS
+                </div>
+
+                <div>
+                    <strong>FIELDSURE</strong>
+                    <small>FIELD EVIDENCE SYSTEM</small>
+                </div>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="status-light"></span>
+
+                <span id="networkStatus">
+                    OFFLINE READY
+                </span>
+
+                <i></i>
+
+                <span id="clock">
+                    --:--:--
+                </span>
+
+            </div>
+
+
+            <div class="operator">
+
+                <div class="operator-circle">
+                    07
+                </div>
+
+                <div>
+                    <b>FIELD OPERATOR</b>
+                    <small id="operatorBadge">FS-07</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <!-- =========================
+                 LOGIN
+                 ========================= -->
+
+            <section id="login" class="screen active">
+
+                <div class="login-container">
+
+                    <div class="eyebrow">
+                        01 / SECURE ACCESS
+                    </div>
+
+                    <h1>
+                        Enter the field.<br>
+                        <em>Trust the record.</em>
+                    </h1>
+
+                    <p class="description">
+                        A guided workflow for portable testing,
+                        calibrated image capture and evidence
+                        integrity — designed for field operation.
+                    </p>
+
+
+                    <div class="login-card">
+
+                        <div class="unit-row">
+                            <span>LOCAL FIELD UNIT</span>
+                            <b>FS-07</b>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="operatorId">
+                                OPERATOR ID
+                            </label>
+
+                            <input
+                                id="operatorId"
+                                class="form-control"
+                                type="text"
+                                value="FS-07"
+                                autocomplete="off"
+                                placeholder="Enter operator ID"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="accessCode">
+                                ACCESS CODE
+                            </label>
+
+                            <input
+                                id="accessCode"
+                                class="form-control"
+                                type="password"
+                                value="12345678"
+                                placeholder="Enter access code"
+                            >
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-primary primary-btn"
+                            type="button"
+                            onclick="enterField()"
+                        >
+                            <span>AUTHENTICATE</span>
+                            <b>→</b>
+                        </button>
+
+
+                        <div
+                            id="authMessage"
+                            class="auth-message"
+                        ></div>
+
+
+                        <div class="secure-message">
+                            <span>●</span>
+                            Local evidence vault available · No network required
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 KIT SCREEN
+                 ========================= -->
+
+            <section id="kitScreen" class="screen">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            02 / TEST CONFIGURATION
+                        </div>
+
+                        <h2>
+                            Select the field kit
+                        </h2>
+
+                        <p>
+                            Choose the test profile before starting
+                            guided image capture.
+                        </p>
+
+                    </div>
+
+
+                    <div class="header-meta">
+                        UNIT FS-07
+                        <b>● READY</b>
+                    </div>
+
+                </div>
+
+
+                <div class="kit-layout">
+
+                    <div class="kit-grid">
+
+                        <article
+                            class="kit-card selected"
+                            data-kit-name="Multi-Drop 6"
+                            data-kit-code="MCT-6"
+                            onclick="selectKit(this)"
+                        >
+
+                            <div class="kit-top">
+                                <span>A01</span>
+                                <b class="check">✓</b>
+                            </div>
+
+                            <div class="kit-object multi">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <h3>
+                                Multi-Drop 6
+                            </h3>
+
+                            <p>
+                                Six-zone field reagent profile
+                                for multi-class presumptive screening.
+                            </p>
+
+                            <div class="tags">
+                                <span>6 DROPS</span>
+                                <span>MCT-6</span>
+                            </div>
+
+                        </article>
+
+
+                        <article
+                            class="kit-card"
+                            data-kit-name="Single Test A"
+                            data-kit-code="STA"
+                            onclick="selectKit(this)"
+                        >
+
+                            <div class="kit-top">
+                                <span>A02</span>
+                                <b class="check"></b>
+                            </div>
+
+                            <div class="kit-object single">
+                                <i></i>
+                            </div>
+
+                            <h3>
+                                Single Test A
+                            </h3>
+
+                            <p>
+                                Single-zone controlled field
+                                test profile with guided capture.
+                            </p>
+
+                            <div class="tags">
+                                <span>1 DROP</span>
+                                <span>STA</span>
+                            </div>
+
+                        </article>
+
+
+                        <article
+                            class="kit-card"
+                            data-kit-name="Control Sample"
+                            data-kit-code="QC"
+                            onclick="selectKit(this)"
+                        >
+
+                            <div class="kit-top">
+                                <span>A03</span>
+                                <b class="check"></b>
+                            </div>
+
+                            <div class="kit-object control">
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <h3>
+                                Control Sample
+                            </h3>
+
+                            <p>
+                                Reference workflow for capture
+                                and calibration readiness.
+                            </p>
+
+                            <div class="tags">
+                                <span>CONTROL</span>
+                                <span>QC</span>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <aside class="kit-summary">
+
+                        <small>
+                            SELECTED PROFILE
+                        </small>
+
+                        <h3 id="selectedKitName">
+                            Multi-Drop 6
+                        </h3>
+
+                        <code id="selectedKitCode">
+                            MCT-6 / FIELD PROFILE
+                        </code>
+
+
+                        <div class="summary-row">
+                            <span>Camera guidance</span>
+                            <b>ENABLED</b>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Reference card</span>
+                            <b>REQUIRED</b>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Offline storage</span>
+                            <b>READY</b>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Evidence seal</span>
+                            <b>SHA-256</b>
+                        </div>
+
+
+                        <button
+                            class="btn btn-primary primary-btn"
+                            type="button"
+                            onclick="startCapture()"
+                        >
+                            <span>OPEN CAMERA</span>
+                            <b>→</b>
+                        </button>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CAMERA SCREEN
+                 ========================= -->
+
+            <section id="cameraScreen" class="screen">
+
+                <div class="camera-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            03 / GUIDED CAPTURE
+                        </div>
+
+                        <h2>
+                            Position sample inside frame
+                        </h2>
+
+                    </div>
+
+
+                    <div class="camera-status">
+
+                        <span>● GPS LOCKED</span>
+                        <span>● OFFLINE VAULT</span>
+
+                        <span id="cameraQuality">
+                            QUALITY CHECK
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="camera-shell">
+
+                    <div class="camera-view">
+
+                        <video
+                            id="cameraVideo"
+                            class="camera-video"
+                            autoplay
+                            muted
+                            playsinline
+                        ></video>
+
+
+                        <div class="demo-camera">
+
+                            <div class="sample-glow"></div>
+
+                            <div class="cassette">
+
+                                <div class="cassette-logo">
+                                    FS
+                                </div>
+
+                                <div class="cassette-window">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+
+                                <span>
+                                    FIELD TEST CASSETTE
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="camera-grid"></div>
+
+                        <div class="laser"></div>
+
+
+                        <div class="focus-frame">
+
+                            <span class="corner top-left"></span>
+                            <span class="corner top-right"></span>
+                            <span class="corner bottom-left"></span>
+                            <span class="corner bottom-right"></span>
+
+                            <div class="crosshair">
+                                <i></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="readout top-left-readout">
+
+                            <b>LIVE CAPTURE</b>
+
+                            <span>
+                                1080 × 1920 · 30 FPS
+                            </span>
+
+                        </div>
+
+
+                        <div class="readout top-right-readout">
+
+                            <b id="alignment">
+                                ALIGNMENT 96%
+                            </b>
+
+                            <span>
+                                REFERENCE CARD DETECTED
+                            </span>
+
+                        </div>
+
+
+                        <div class="readout bottom-left-readout">
+
+                            <b id="light">
+                                LIGHT 94%
+                            </b>
+
+                            <span>
+                                WHITE BALANCE STABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="readout bottom-right-readout">
+
+                            <b>
+                                GPS ±8m
+                            </b>
+
+                            <span>
+                                LOCAL TIMESTAMP ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="capture-quality-panel">
+
+                            <div>
+                                <span>FRAME</span>
+                                <b id="liveFrameScore">96%</b>
+                            </div>
+
+                            <div>
+                                <span>LIGHT</span>
+                                <b id="liveLightScore">94%</b>
+                            </div>
+
+                            <div>
+                                <span>GLARE</span>
+                                <b id="liveGlareScore">LOW</b>
+                            </div>
+
+                            <div>
+                                <span>ANGLE</span>
+                                <b id="liveAngleScore">2.1°</b>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="flash"
+                            class="flash camera-flash"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="camera-controls">
+
+                        <div class="quality-info">
+
+                            <div>
+                                <span>FRAME</span>
+                                <b id="frameState">READY</b>
+                            </div>
+
+                            <div>
+                                <span>REFERENCE</span>
+                                <b>DETECTED ✓</b>
+                            </div>
+
+                            <div>
+                                <span>CALIBRATION</span>
+                                <b>READY</b>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            id="captureBtn"
+                            class="capture-btn"
+                            type="button"
+                            onclick="captureSample()"
+                        >
+                            <span></span>
+                            <b>CAPTURE</b>
+                        </button>
+
+
+                        <p>
+                            Hold the cassette steady inside the guide.
+                            FieldSure checks framing, lighting, glare
+                            and alignment before accepting the frame.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CALIBRATION
+                 ========================= -->
+
+            <section
+                id="calibrationScreen"
+                class="screen"
+            >
+
+                <div class="analysis-wrapper">
+
+                    <div class="eyebrow">
+                        04 / IMAGE CALIBRATION
+                    </div>
+
+                    <h2>
+                        Normalize before analysis.
+                    </h2>
+
+                    <p class="description small">
+                        Reference-card correction reduces lighting
+                        variation before simulated colour analysis.
+                    </p>
+
+
+                    <div class="calibration-workspace">
+
+                        <div class="calibration-camera">
+
+                            <div class="calibration-grid-overlay"></div>
+
+                            <div class="calibration-scan-line"></div>
+
+
+                            <div class="reference-guide">
+
+                                <span class="guide-corner tl"></span>
+                                <span class="guide-corner tr"></span>
+                                <span class="guide-corner bl"></span>
+                                <span class="guide-corner br"></span>
+
+                                <div class="guide-title">
+                                    REFERENCE CARD
+                                </div>
+
+                                <div class="guide-subtitle">
+                                    4-POINT CALIBRATION
+                                </div>
+
+                            </div>
+
+
+                            <div class="calibration-reference-card">
+
+                                <div class="reference-header">
+                                    <span>FIELD REFERENCE</span>
+                                    <b>FS-REF-04</b>
+                                </div>
+
+
+                                <div class="reference-patches">
+
+                                    <span class="reference-patch patch-white"></span>
+                                    <span class="reference-patch patch-light"></span>
+                                    <span class="reference-patch patch-grey"></span>
+                                    <span class="reference-patch patch-black"></span>
+
+                                    <span class="reference-patch patch-red"></span>
+                                    <span class="reference-patch patch-yellow"></span>
+                                    <span class="reference-patch patch-green"></span>
+                                    <span class="reference-patch patch-blue"></span>
+
+                                </div>
+
+
+                                <div class="reference-footer">
+                                    CALIBRATION TARGET
+                                </div>
+
+                            </div>
+
+
+                            <div class="calibration-indicator">
+
+                                <div>
+                                    <span class="indicator-light"></span>
+                                    <b id="calLight">
+                                        LIGHT STABLE
+                                    </b>
+                                </div>
+
+                                <div>
+                                    <span class="indicator-glare"></span>
+                                    <b id="calGlare">
+                                        GLARE LOW
+                                    </b>
+                                </div>
+
+                                <div>
+                                    <span class="indicator-colour"></span>
+                                    <b id="calColour">
+                                        COLOUR READY
+                                    </b>
+                                </div>
+
+                            </div>
+
+
+                            <div class="reference-detected">
+
+                                <span class="detected-dot"></span>
+
+                                REFERENCE DETECTED
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="calibration-process-card">
+
+                            <div class="process-heading">
+
+                                <span>
+                                    CALIBRATION PIPELINE
+                                </span>
+
+                                <b id="calibrationStatus">
+                                    INITIALIZING
+                                </b>
+
+                            </div>
+
+
+                            <div class="process-row">
+
+                                <span class="process-number">
+                                    01
+                                </span>
+
+                                <div>
+                                    <b>
+                                        Reference card detection
+                                    </b>
+
+                                    <small>
+                                        Four-point colour reference found
+                                    </small>
+                                </div>
+
+                                <strong id="cal0">✓</strong>
+
+                            </div>
+
+
+                            <div class="process-row">
+
+                                <span class="process-number">
+                                    02
+                                </span>
+
+                                <div>
+                                    <b>
+                                        Lighting normalization
+                                    </b>
+
+                                    <small>
+                                        Compensating capture conditions
+                                    </small>
+                                </div>
+
+                                <strong id="cal1">—</strong>
+
+                            </div>
+
+
+                            <div class="process-row">
+
+                                <span class="process-number">
+                                    03
+                                </span>
+
+                                <div>
+                                    <b>
+                                        Colour calibration
+                                    </b>
+
+                                    <small>
+                                        Building normalized sample profile
+                                    </small>
+                                </div>
+
+                                <strong id="cal2">—</strong>
+
+                            </div>
+
+
+                            <div class="process-row">
+
+                                <span class="process-number">
+                                    04
+                                </span>
+
+                                <div>
+                                    <b>
+                                        Quality gate
+                                    </b>
+
+                                    <small>
+                                        Blur, exposure and alignment check
+                                    </small>
+                                </div>
+
+                                <strong id="cal3">—</strong>
+
+                            </div>
+
+
+                            <div class="calibration-progress">
+                                <span id="calBar"></span>
+                            </div>
+
+
+                            <div class="progress-text">
+
+                                <span id="calText">
+                                    STARTING CALIBRATION...
+                                </span>
+
+                                <b id="calPct">0%</b>
+
+                            </div>
+
+
+                            <div class="calibration-live-data">
+
+                                <div>
+                                    <span>EXPOSURE</span>
+                                    <b id="calExposure">--</b>
+                                </div>
+
+                                <div>
+                                    <span>GLARE</span>
+                                    <b id="calGlareValue">--</b>
+                                </div>
+
+                                <div>
+                                    <span>REFERENCE ΔE</span>
+                                    <b id="calDelta">--</b>
+                                </div>
+
+                                <div>
+                                    <span>QUALITY</span>
+                                    <b id="calQualityValue">--</b>
+                                </div>
+
+                            </div>
+
+
+                            <div class="calibration-note">
+
+                                <span>i</span>
+
+                                Calibration is a prototype simulation.
+                                It demonstrates the intended
+                                reference-card workflow and quality gate.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ANALYSIS
+                 ========================= -->
+
+            <section
+                id="analysisScreen"
+                class="screen"
+            >
+
+                <div class="analysis-wrapper">
+
+                    <div class="eyebrow">
+                        05 / FIELD ANALYSIS
+                    </div>
+
+                    <h2>
+                        Reading the test response.
+                    </h2>
+
+                    <p class="description small">
+                        Simulated prototype analysis —
+                        not a real drug-identification model.
+                    </p>
+
+
+                    <div class="analysis-console">
+
+                        <div class="analysis-orb">
+
+                            <div class="orb outer"></div>
+                            <div class="orb middle"></div>
+
+                            <div class="orb-core">
+
+                                <span id="analysisPct">
+                                    0%
+                                </span>
+
+                                <small>
+                                    PROCESSING
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="pipeline">
+
+                            <div class="pipeline-title">
+                                PROCESS PIPELINE
+                            </div>
+
+
+                            <div
+                                class="pipeline-row active"
+                                id="stream1"
+                            >
+                                <span>01</span>
+                                <b>IMAGE INGEST</b>
+                                <i>RUNNING</i>
+                            </div>
+
+
+                            <div
+                                class="pipeline-row"
+                                id="stream2"
+                            >
+                                <span>02</span>
+                                <b>REFERENCE NORMALIZATION</b>
+                                <i>QUEUED</i>
+                            </div>
+
+
+                            <div
+                                class="pipeline-row"
+                                id="stream3"
+                            >
+                                <span>03</span>
+                                <b>HSV FEATURE EXTRACTION</b>
+                                <i>QUEUED</i>
+                            </div>
+
+
+                            <div
+                                class="pipeline-row"
+                                id="stream4"
+                            >
+                                <span>04</span>
+                                <b>KIT PROFILE COMPARISON</b>
+                                <i>QUEUED</i>
+                            </div>
+
+
+                            <div
+                                class="pipeline-row"
+                                id="stream5"
+                            >
+                                <span>05</span>
+                                <b>CONFIDENCE ESTIMATION</b>
+                                <i>QUEUED</i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="analysis-data">
+
+                            <div>
+                                <span>PROFILE</span>
+                                <b id="analysisKit">MCT-6</b>
+                            </div>
+
+                            <div>
+                                <span>CAPTURE</span>
+                                <b>ACCEPTED</b>
+                            </div>
+
+                            <div>
+                                <span>MODE</span>
+                                <b>OFFLINE</b>
+                            </div>
+
+                            <div>
+                                <span>QUALITY GATE</span>
+                                <b id="analysisQuality">PASS</b>
+                            </div>
+
+                        </div>
+
+
+                        <div class="analysis-insight">
+
+                            <span class="insight-icon">
+                                ✦
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    EXPLAINABLE ANALYSIS
+                                </b>
+
+                                <p id="analysisInsight">
+                                    Comparing normalized colour response
+                                    against the selected prototype kit profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 RESULT
+                 ========================= -->
+
+            <section
+                id="resultScreen"
+                class="screen"
+            >
+
+                <div class="result-wrapper">
+
+                    <div class="eyebrow">
+                        06 / PRESUMPTIVE RESULT
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <div class="result-header">
+
+                            <div>
+
+                                <div class="result-status">
+                                    ● FIELD ANALYSIS COMPLETE
+                                </div>
+
+                                <div
+                                    id="resultClassification"
+                                    class="result-value"
+                                >
+                                    PRESUMPTIVE
+                                </div>
+
+                                <p id="resultDescription">
+                                    Field-test assistance result.
+                                    Laboratory confirmation required.
+                                </p>
+
+                            </div>
+
+
+                            <div class="confidence">
+
+                                <span>
+                                    CONFIDENCE
+                                </span>
+
+                                <b id="confidenceValue">
+                                    92%
+                                </b>
+
+                                <i>
+                                    <em id="confidenceBar"></em>
+                                </i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="result-visual">
+
+                            <div class="result-laser"></div>
+
+                            <div class="cassette result-cassette">
+
+                                <div class="cassette-logo">
+                                    FS
+                                </div>
+
+                                <div class="cassette-window">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+
+                                <span>
+                                    EVIDENCE FRAME
+                                </span>
+
+                            </div>
+
+
+                            <div class="result-stamp">
+                                PRESUMPTIVE<br>
+                                FIELD RESULT
+                            </div>
+
+                        </div>
+
+
+                        <div class="evidence-score-panel">
+
+                            <div class="score-heading">
+
+                                <span>
+                                    EVIDENCE QUALITY SCORE
+                                </span>
+
+                                <b id="evidenceScore">
+                                    94 / 100
+                                </b>
+
+                            </div>
+
+
+                            <div class="score-track">
+                                <span id="evidenceScoreBar"></span>
+                            </div>
+
+
+                            <div class="score-factors">
+
+                                <span>
+                                    <i>✓</i>
+                                    CALIBRATED
+                                </span>
+
+                                <span>
+                                    <i>✓</i>
+                                    LOW GLARE
+                                </span>
+
+                                <span>
+                                    <i>✓</i>
+                                    ALIGNMENT
+                                </span>
+
+                                <span>
+                                    <i>✓</i>
+                                    REFERENCE
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="evidence-meta">
+
+                            <div>
+                                <span>TEST ID</span>
+                                <b id="testId">
+                                    FS-2026-000000
+                                </b>
+                            </div>
+
+                            <div>
+                                <span>TEST KIT</span>
+                                <b id="resultKit">
+                                    Multi-Drop 6
+                                </b>
+                            </div>
+
+                            <div>
+                                <span>TIMESTAMP</span>
+                                <b id="resultTime">--</b>
+                            </div>
+
+                            <div>
+                                <span>GPS</span>
+                                <b>
+                                    LOCKED · ±8m
+                                </b>
+                            </div>
+
+                            <div>
+                                <span>OPERATOR</span>
+                                <b id="resultOperator">
+                                    FS-07
+                                </b>
+                            </div>
+
+                            <div>
+                                <span>STORAGE</span>
+                                <b>
+                                    LOCAL / OFFLINE
+                                </b>
+                            </div>
+
+                        </div>
+
+
+                        <div class="integrity">
+
+                            <div class="integrity-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <span>
+                                    INTEGRITY VERIFICATION
+                                </span>
+
+                                <b>
+                                    SHA-256 RECORD HASH GENERATED
+                                </b>
+                            </div>
+
+                            <code id="hashValue">—</code>
+
+                        </div>
+
+
+                        <div class="result-actions">
+
+                            <button
+                                class="btn btn-ghost secondary-btn"
+                                type="button"
+                                onclick="verifyIntegrity()"
+                            >
+                                VERIFY RECORD
+                            </button>
+
+
+                            <button
+                                class="btn btn-ghost secondary-btn"
+                                type="button"
+                                onclick="speakCurrentResult()"
+                            >
+                                🔊 FIELD ASSISTANT
+                            </button>
+
+
+                            <button
+                                class="btn btn-primary primary-btn"
+                                type="button"
+                                onclick="sealRecord()"
+                            >
+                                <span>SEAL EVIDENCE</span>
+                                <b>→</b>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SEALED EVIDENCE
+                 ========================= -->
+
+            <section
+                id="sealedScreen"
+                class="screen"
+            >
+
+                <div class="sealed">
+
+                    <div class="seal">
+                        <div>✓</div>
+                    </div>
+
+
+                    <div class="eyebrow">
+                        07 / EVIDENCE VAULT
+                    </div>
+
+
+                    <h2>
+                        Record sealed.
+                    </h2>
+
+
+                    <p class="description small">
+                        The prototype has linked the captured image,
+                        result, timestamp, GPS, operator and simulated
+                        SHA-256 value into one digital evidence record.
+                    </p>
+
+
+                    <div class="sealed-card">
+
+                        <div>
+                            <span>STATUS</span>
+                            <b>
+                                ● SEALED &amp; STORED LOCALLY
+                            </b>
+                        </div>
+
+                        <div>
+                            <span>SYNC QUEUE</span>
+                            <b id="syncQueueCount">
+                                0
+                            </b>
+                        </div>
+
+                        <div>
+                            <span>INTEGRITY</span>
+                            <b id="sealedIntegrity">
+                                VERIFIED ✓
+                            </b>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chain-card">
+
+                        <div class="chain-heading">
+
+                            <span>
+                                CHAIN OF CUSTODY
+                            </span>
+
+                            <b>
+                                EVENT LOG
+                            </b>
+
+                        </div>
+
+                        <div
+                            id="chainTimeline"
+                            class="chain-timeline"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="verification-card">
+
+                        <div class="verification-symbol">
+                            ◈
+                        </div>
+
+                        <div>
+
+                            <span>
+                                RECORD FINGERPRINT
+                            </span>
+
+                            <code id="sealedHash">—</code>
+
+                        </div>
+
+
+                        <button
+                            class="btn mini-btn"
+                            type="button"
+                            onclick="verifyIntegrity()"
+                        >
+                            VERIFY
+                        </button>
+
+                    </div>
+
+
+                    <div class="sealed-actions">
+
+                        <button
+                            class="btn btn-ghost secondary-btn"
+                            type="button"
+                            onclick="startNewTest()"
+                        >
+                            NEW TEST
+                        </button>
+
+
+                        <button
+                            class="btn btn-primary primary-btn"
+                            type="button"
+                            onclick="openFieldAssistant()"
+                        >
+                            <span>
+                                OPEN FIELD ASSISTANT
+                            </span>
+
+                            <b>✦</b>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =========================
+             TOAST
+             ========================= -->
+
+        <div
+            id="toast"
+            class="toast"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- =========================
+             FIELD ASSISTANT
+             ========================= -->
+
+        <div id="assistantRoot"></div>
+
+
+        <!-- =========================
+             PROTOTYPE WARNING
+             ========================= -->
+
+        <div class="prototype-warning">
+            PROTOTYPE · SIMULATED ANALYSIS · NOT FOR REAL-WORLD DRUG IDENTIFICATION
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SAFETY FALLBACK
+         ========================= -->
+
+    <script>
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                var boot = document.getElementById("boot");
+                var app = document.getElementById("app");
+
+                if (boot) {
+                    boot.classList.add("hidden");
+                }
+
+                if (app) {
+                    app.classList.remove("hidden");
+                }
+
+                var login = document.getElementById("login");
+
+                if (login) {
+                    login.classList.add("active");
+                }
+
+            }, 3500);
+
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
